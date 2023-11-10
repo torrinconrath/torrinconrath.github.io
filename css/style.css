@@ -9,13 +9,13 @@ body {
 }
 
 header, footer {
-  background-color: #ffa500;
+  background-color: #177064;
   text-align: left;
 /*  min-width: 500px; */
 }
 
 header {
-  font-family: Work Sans;
+  font-family: 'Karla', sans-serif;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -33,7 +33,7 @@ main {
 }
 
 h1 {
-  font-family: Poppins;
+  font-family: 'Merriweather', serif;
   font-size: calc(1em + 3vw);
   padding-bottom: .67em;
   border-bottom: 1px solid;
@@ -41,12 +41,12 @@ h1 {
 }
 
 h2 {
-  font-family: Poppins;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #ffa500;
+  color: #1d4b0b;
   padding: 10px 0px 10px 10px;
 }
 
@@ -66,7 +66,7 @@ img {
 .bio {
 color: #ffffff;
 font-size: 24px;
-font-family: 'Work Sans';
+font-family: 'Karla', sans-serif;
 }
 
 .buttonBox {
@@ -87,7 +87,7 @@ font-family: 'Work Sans';
 }
 
 .myButton:hover {
-    background-color:#e69708;
+    background-color:#177064;
 }
 
 .myButton:active {
@@ -101,6 +101,7 @@ font-family: 'Work Sans';
 }
 
 .a {
+  color: #310864
 
 }
 
@@ -117,26 +118,26 @@ font-family: 'Work Sans';
 
 .mins {
   display: inline-block;
-  font-family: Poppins;
+  font-family: 'Merriweather', serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #4a4a4a;
+  color: #000000;
   position: relative;
   bottom: 5px;
 }
 
 .description {
-  font-family: Work Sans;
+  font-family: 'Karla', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.29;
   letter-spacing: 0.1px;
   text-align: left;
-  color: #4a4a4a;
+  color: #000000;
   padding: 10px 0px 10px 10px;
-  border-top: 1px solid #4a4a4a;
+  border-top: 1px solid #000000;
 }
 
 .logo {
