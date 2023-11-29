@@ -154,9 +154,15 @@ font-family: 'Karla', sans-serif;
     margin: auto;
   }
 
-footer {
-  margin-top: 44px;
-}
+  footer div {
+    height: 100%;
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-content: center;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
 
 @media all and (max-width:700px) {
   main {
