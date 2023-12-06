@@ -164,6 +164,7 @@ font-family: 'Karla', sans-serif;
     font-size: 18px;
   }
   img {
+    width: 40vh;
     height: 40vh;
   }
 }
