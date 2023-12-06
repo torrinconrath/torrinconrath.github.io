@@ -97,8 +97,8 @@ font-family: 'Karla', sans-serif;
     top:1px;
 }
 
-.recipe {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+.project {
+  box-shadow: 0 0px 1px 0 rgb(0 0 0 / 40%); 
   width: 100%;
 }
 
@@ -138,15 +138,7 @@ font-family: 'Karla', sans-serif;
   letter-spacing: 0.1px;
   text-align: left;
   color: #000000;
-  padding: 10px 0px 10px 10px;
-  border-top: 1px solid #000000;
-}
-
-.logo {
-  width: 115px;
-  height: 21.1px;
-  object-fit: contain;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .container {
