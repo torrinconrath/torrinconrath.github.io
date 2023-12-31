@@ -1,0 +1,16 @@
+        <div class="project">
+          <img src="images/xavier_picture.jpg" alt="Picture of Xavier" />
+          <h2>A Secret Gem of a Show: Xavier: Renegade Angel</h2>
+          <p class="description">Are you looking for the next show to watch? Then let's learn about <a href="https://medium.com/@torrin_37492/a-secret-gem-of-a-show-xavier-renegade-angel-c263d4c6277b">how good XRA is</a>! </p>            
+        </div>
+        <div class="project">
+          <img src="images/spongebob.jpg" alt="Picture of Spongebob" />
+          <h2>ENGL 3844 Panthers - Podcast</h2>
+          <p class="description">Are you looking for some discussions? Then check out my podcast where we discussed <a href="https://on.soundcloud.com/Xp18V">Spongebob's influence</a> on both us and adult cartoons as a whole!</p>            
+        </div>
+        <div class="project">
+          <img src="images/pork.png" alt="Picture of Braised Pork Belly" />
+          <h2>Let's Make Braised Pork Belly!</h2>
+          <p class="description">
+            Hungry yet? You have to check how to make some bomb food, like this <a href="https://youtu.be/VyhohM0KmfY">braised pork belly</a>!</p>
+        </div>
