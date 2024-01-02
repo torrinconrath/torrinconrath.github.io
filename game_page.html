@@ -4,16 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>AGENT V.S. GHOSTS</title>
-  <!-- Include Brython -->
-  <script type="text/javascript" src="path/to/brython.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Merriweather:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
   <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
-  <!-- Include your Brython-converted Pygame script -->
-  <script type="text/python" src="path/to/agentvsghosts.py"></script>
+  <button id="launchButton">Launch Game</button>
+
   <script>
-    // Run the Brython script to start the game
-    brython_run_script();
+    document.getElementById('launchButton').addEventListener('click', function() {
+      fetch('/').then(response => response.text()).then(message => alert(message));
+    });
   </script>
 </body>
 </html>
