@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AGENT V.S. GHOSTS</title>
+    <!-- Add your CSS links and other head elements here -->
+</head>
+<body>
+    <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
+    <button id="launchButton">Launch Game</button>
+
+    <script>
+        document.getElementById('launchButton').addEventListener('click', function() {
+            // Make an AJAX request to the server to launch the game
+            fetch('/launch_game').then(response => response.text()).then(message => alert(message));
+        });
+    </script>
+</body>
+</html>
