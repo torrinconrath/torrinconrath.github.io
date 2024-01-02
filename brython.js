@@ -14724,7 +14724,7 @@ evObj.initEvent(etype,true,false)
 self.dispatchEvent(evObj)}}
 DOMNode.unbind=function(self,event){
 self.$events=self.$events ||{}
-if(self.$events==={}){return _b_.None}
+if(self.$events=={}){return _b_.None}
 if(event===undefined){for(var event in self.$events){DOMNode.unbind(self,event)}
 return _b_.None}
 if(self.$events[event]===undefined ||
