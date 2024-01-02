@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('button_template.html')
 
 @app.route('/launch_game')
 def launch_game():
