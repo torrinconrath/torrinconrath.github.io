@@ -12,8 +12,11 @@
   <script>
     document.getElementById('launchButton').addEventListener('click', function() {
       // Make an AJAX request to the server to launch the game
-      fetch('/launch_game').then(response => response.text()).then(message => alert(message));
+      fetch('/launch_game')  // Change the URL to the actual endpoint on your server
+        .then(response => response.text())
+        .then(message => alert(message))
+        .catch(error => console.error('Error:', error));
     });
-  </script> 
+  </script>
 </body>
 </html>
