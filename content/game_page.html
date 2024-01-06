@@ -1,3 +1,4 @@
+<!-- game_page.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +17,8 @@
     document.getElementById('launchButton').addEventListener('click', function() {
       // Initialize Pyodide
       pyodide.runPythonAsync(`
-        def launch_game():
-            return "Game launched successfully!"
-
-        launch_game()
-      `).then(data => alert(data));
+        result = "Game launched successfully!"
+      `).then(data => alert(data.result));
     });
   </script>
 </body>
