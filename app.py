@@ -1,18 +1,10 @@
 # app.py
 
-from flask import Flask, render_template
-from agentvsghosts import start_game
+from flask import Flask
+from routes import configure_routes
 
 app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('button_template.html')
-
-@app.route('/launch_game')
-def launch_game():
-    start_game()
-    return 'Game launched!'
+configure_routes(app)
 
 if __name__ == '__main__':
     app.run(debug=True)

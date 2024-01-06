@@ -4,10 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>AGENT V.S. GHOSTS</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Merriweather:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
   <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
@@ -15,8 +11,9 @@
 
   <script>
     document.getElementById('launchButton').addEventListener('click', function() {
-      fetch('/').then(response => response.text()).then(message => alert(message));
+      // Make an AJAX request to the server to launch the game
+      fetch('/launch_game').then(response => response.text()).then(message => alert(message));
     });
-  </script>
+  </script> 
 </body>
 </html>
