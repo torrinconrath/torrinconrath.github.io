@@ -25,31 +25,3 @@
   </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>AGENT V.S. GHOSTS</title>
-
-  <!-- Include Pyodide -->
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
-</head>
-
-<body>
-  <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
-  <button id="launchButton">Launch Game</button>
-
-  <script>
-    document.getElementById('launchButton').addEventListener('click', function() {
-      // Initialize Pyodide
-      pyodide.runPythonAsync(`
-        def launch_game():
-            return "Game launched successfully!"
-
-        launch_game()
-      `).then(data => alert(data));
-    });
-  </script>
-</body>
-</html>
