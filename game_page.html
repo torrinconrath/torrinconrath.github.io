@@ -1,0 +1,26 @@
+<!-- game_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AGENT V.S. GHOSTS</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Merriweather:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
+  <a id="downloadLink" href="#" download="game_launcher.exe">
+    <button id="downloadButton">Download Game</button>
+  </a>
+  <script>
+    // Change the href attribute when the button is clicked
+    document.getElementById('downloadButton').addEventListener('click', function() {
+      document.getElementById('downloadLink').href = 'path/to/your/dist/launcher.exe'; // Update with the correct path
+    });
+  </script>
+</body>
+</html>
