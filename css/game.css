@@ -31,3 +31,16 @@ body {
     background-color: #082b0a;
   }
   
+  .image-container {
+    margin-top: 20px;
+    border: 2px solid #000000; /* Black border */
+    padding: 10px;
+  }
+  
+  .game-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 5px;
+  }
+  
