@@ -35,12 +35,40 @@ body {
     margin-top: 20px;
     border: 2px solid #000000; /* Black border */
     padding: 10px;
+    display: flex;
+    align-items: center;
   }
   
   .game-image {
-    width: 400px;
-    height: 400px;
+    max-width: 50%;
+    margin-right: 20;
     object-fit: cover; /* Maintain aspect ratio and cover container */
     border-radius: 10px;
+  }
+
+  .instructions-container{
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .instructions-container h3 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .instructions-container p {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .instructions-container li {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .list-icon {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
   }
   
