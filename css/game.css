@@ -38,9 +38,9 @@ body {
   }
   
   .game-image {
-    width: 400px;
-    height: 400px;
+    width: 100px;
+    height: 100px;
     object-fit: cover; /* Maintain aspect ratio and cover container */
-    border-radius: 5px;
+    border-radius: 10px;
   }
   
