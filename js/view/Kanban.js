@@ -27,4 +27,13 @@ export default class Kanban {
 			}
 		];
 	}
+
+	static setBackgroundImage(url) {
+		const image = new Image();
+		image.src = url;
+		image.onload = () => {
+		  document.body.style.backgroundImage = `url(${url})`;
+		  document.body.style.backgroundSize = "cover";
+		};
+	  }
 }
