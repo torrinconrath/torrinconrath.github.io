@@ -53,3 +53,90 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+.pomo-message {
+	height: 20px;
+	margin: 10px auto 20px auto;
+  }
+  
+  .pomo-container {
+	width: 250px;
+	height: 420px;
+	margin: 40px auto;
+	text-align: center;
+	border-radius: 10px;
+	padding: 20px;
+	border-color: #861F41;
+  }
+
+  .pomo-circle {
+	position: relative;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+  }
+  
+  .circle-shape {
+	pointer-events: none;
+  }
+
+  .semi-circle {
+	position: absolute;
+	width: 100px;
+	height: 200px;
+	box-sizing: border-box;
+	border: solid 6px;
+  }
+  
+  .left-side {
+	top: 0;
+	left: 0;
+	transform-origin: right center;
+	transform: rotate(0deg);
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+	border-right: none;
+	z-index: 1;
+  }
+  
+   .right-side {
+	top: 0;
+	left: 100px;
+	transform-origin: left center;
+	transform: rotate(0 deg);
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-left: none;
+  }
+
+  .circle {
+	border-color: #861F41;
+  }
+  
+  .circle-mask {
+	border-color: #861F41;
+  }
+
+  .pomo-counter-box {
+	font-family: 'Droid Sans Mono', monospace;
+	font-size: 250%;
+	position: relative;
+	top: 50px;
+	color: #E5751F;
+  }
+  
+  button {
+	position: relative;
+	top: 50px;
+	font-size: 80%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: none;
+	background: none;
+	outline: none;
+	color: #E5751F;
+  }
+  
+  button:hover {
+	color: #861F41;
+  }
