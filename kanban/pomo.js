@@ -20,6 +20,8 @@ const appTimer = () => {
   if (state) {
     state = false;
 
+    totalSeconds--;
+
     const updateSeconds = () => {
       const minutesLeft = Math.floor(totalSeconds / 60);
       const secondsLeft = totalSeconds % 60;
@@ -31,7 +33,7 @@ const appTimer = () => {
       }
       minuteSpan.textContent = minutesLeft.toString().padStart(2, '0');
 
-      totalSeconds--;
+      
 
       if (totalSeconds === 0) {
         bells.play();
