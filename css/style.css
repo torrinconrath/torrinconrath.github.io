@@ -346,14 +346,18 @@ nav {
   gap: 8px;
 }
 
-.skill-list li::before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent2);
+.skill-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  min-width: 80px;
   flex-shrink: 0;
+  display: inline-block;
 }
+
+.skill-list li::before { display: none; }
 
 /* ── FOOTER ── */
 footer {
