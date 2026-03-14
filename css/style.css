@@ -88,6 +88,31 @@ nav {
 /* ── HERO ── */
 .hero {
   padding: 6rem 0 5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content { display: flex; flex-direction: column; }
+
+.hero-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border-hover);
+  filter: grayscale(20%);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo {
+    display: none;
+  }
 }
 
 .hero-eyebrow {
