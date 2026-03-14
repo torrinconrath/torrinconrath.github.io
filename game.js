@@ -1,6 +1,5 @@
 // ─────────────────────────────────────────────
 // SPRITES
-// The firecracker images live in game_images/firecracker/, all others in game_images/.
 // ─────────────────────────────────────────────
 const SPRITES_B64 = {
   agent:          'game_images/agent.png',
