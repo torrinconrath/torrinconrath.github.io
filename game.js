@@ -521,10 +521,10 @@ function draw() {
     ctx.fillStyle = 'rgba(0,0,0,0.55)';
     ctx.fillRect(W/2 - 120, H/2 - 50, 240, 80);
     ctx.fillStyle = '#ff4444';
-    ctx.font = 'bold 48px "Courier New", Courier, monospace';
+    ctx.font = 'bold 16px "Courier New", Courier, monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('💣 ' + secsLeft + 's', W/2, H/2);
+    ctx.fillText(secsLeft + 's', W/2, H/2);
   }
 
   // Paused state not in original — omitting to stay faithful
