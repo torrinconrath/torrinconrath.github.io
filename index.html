@@ -30,7 +30,7 @@
     <p class="hero-sub">I build full-stack applications, ML systems, and edge-deployed AI — from mobile apps to fine-tuned models to real-time computer vision.</p>
     <div class="hero-links">
       <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="/cdn-cgi/l/email-protection#d5a1baa7a7bcbbb6babba7b4a1bd95b2b8b4bcb9fbb6bab8" class="btn btn-ghost">Get in Touch</a>
+      <a href="#" class="btn btn-ghost" id="emailBtn">Get in Touch</a>
     </div>
   </section>
 
@@ -144,7 +144,7 @@
         <p>I'm a software engineer interested in the intersection of AI, full-stack development, and systems that run close to the hardware. I like building things end-to-end — from training models to shipping the interface people actually use.</p>
         <p>Right now I'm focused on bringing Car Score Predictor to a commercial release, and continuing to explore edge AI and on-device inference.</p>
         <p>
-          <a href="/cdn-cgi/l/email-protection#d7a3b8a5a5beb9b4b8b9a5b6a3bf97b0bab6bebbf9b4b8ba" style="color: var(--accent); text-decoration: none; font-size: 14px; font-family: var(--font-mono);"><span class="__cf_email__" data-cfemail="f5819a87879c9b969a9b8794819db59298949c99db969a98">[email&#160;protected]</span> ↗</a>
+          <a href="#" id="emailLink" style="color: var(--accent); text-decoration: none; font-size: 14px; font-family: var(--font-mono);">torrinconrath@<!-- bot -->gmail.com ↗</a>
         </p>
       </div>
       <div class="about-skills">
@@ -165,5 +165,30 @@
   <!-- FOOTER -->
   <footer>
     <span class="footer-copy">© 2026 Torrin Conrath</span>
-    <div class="footer
-    
+    <div class="footer-links">
+      <a href="#" id="emailFooter">Email</a>
+      <a href="https://github.com/torrinconrath" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Bot-proof email — assembled at runtime, never as a plain string in the HTML
+  (function() {
+    const u = 'torrinconrath';
+    const d = 'gmail.com';
+    const addr = u + '\u0040' + d;
+    const href = 'mailto:' + addr;
+    ['emailBtn', 'emailLink', 'emailFooter'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.href = href;
+        if (id === 'emailLink') el.textContent = addr + ' ↗';
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
