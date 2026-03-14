@@ -1,64 +1,169 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Torrin Projects Page</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Merriweather:ital@1&display=swap" rel="stylesheet">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torrin Conrath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-    <div class="container">
-      <header>
-        <div class="wrapper">
-          <h1>Torrin Conrath</h1>
-            <p class="bio"> Hello I'm Torrin Conrath! These are my current projects!
-            </p>
-          <div class="buttonBox">
-            <a class="myButton" href="#projects">Go</a>
+<div class="wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-name">torrin conrath</span>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://github.com/torrinconrath" target="_blank">GitHub ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Software Engineer</p>
+    <h1 class="hero-title">Building things that<br><em>actually work.</em></h1>
+    <p class="hero-sub">I build full-stack applications, ML systems, and edge-deployed AI — from mobile apps to fine-tuned models to real-time computer vision.</p>
+    <div class="hero-links">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="/cdn-cgi/l/email-protection#d5a1baa7a7bcbbb6babba7b4a1bd95b2b8b4bcb9fbb6bab8" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Selected Projects</p>
+
+    <!--
+      ╔══════════════════════════════════════════╗
+      ║  TO ADD A PROJECT:                       ║
+      ║  Copy a .project-card block below,       ║
+      ║  update the title, desc, tags, and href. ║
+      ║  Add wip-badge if still in development.  ║
+      ╚══════════════════════════════════════════╝
+    -->
+
+    <div class="projects-grid">
+
+      <!-- PROJECT: Car Score Predictor -->
+      <a class="project-card" href="https://github.com/torrinconrath/car-score-predictor" target="_blank">
+        <div class="project-header">
+          <h2 class="project-title">Car Score Predictor</h2>
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc">
+          A full-stack mobile app that scores used car listings to surface real deals. Type in a car's details in plain text and get a data-driven value score back — powered by a neural network, an NLP parsing pipeline, and a live database fed by a web scraper.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Neural Network</span>
+            <span class="tag">NLP</span>
+          </div>
+          <span class="wip-badge">In Development</span>
+        </div>
+      </a>
+
+      <!-- PROJECT: Jerry Medical Assistant -->
+      <a class="project-card" href="https://github.com/torrinconrath/jerry-the-medical-assistant" target="_blank">
+        <div class="project-header">
+          <h2 class="project-title">Jerry — Medical Assistant</h2>
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc">
+          A fine-tuned medical chatbot built on Qwen3-8B with a full-stack web interface. Trained via supervised fine-tuning on a Kaggle medical Q&A dataset, quantized with AutoAWQ for efficient inference, and served through a Python backend tunneled via Ngrok.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">LLM Fine-tuning</span>
+            <span class="tag">Qwen3-8B</span>
+            <span class="tag">vLLM</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Python</span>
           </div>
         </div>
-      </header>
+      </a>
 
-      <main id="projects">
-        <div class="project">
-          <img src="web_images/ghost_game.png" alt="Picture of an 8-bit Video Game" />
-          <h2>Video Game Demo: AGENT V.S. GHOSTS</h2>
-          <p class="description">
-            How about a frustrating video game? How about you try <a href="game_page.html">AGENTS V.S. GHOSTS</a>!</p>
+      <!-- PROJECT: Pest Detector -->
+      <a class="project-card" href="https://github.com/torrinconrath/pest-detector" target="_blank">
+        <div class="project-header">
+          <h2 class="project-title">Pest Detector</h2>
+          <span class="project-arrow">↗</span>
         </div>
-        <div class="project">
-          <img src="web_images/map.png" alt="Picture of a Github Page" />
-          <h2>React Webpage with Google Maps Integration</h2>
-          <p class="description">
-            This is my <a href="https://github.com/torrinconrath/reacting-to-maps">React Webpage</a> with Google Maps integration.</p>
+        <p class="project-desc">
+          Real-time raccoon and rodent detection using lightweight YOLO models, deployed on edge hardware. Trained and compared YOLOv8n, YOLOv11n, and YOLOv11m across two custom datasets, stress-tested with synthetic augmentations, and deployed to a Raspberry Pi and desktop via a React dashboard.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">YOLOv8</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">TFLite</span>
+            <span class="tag">Flask</span>
+            <span class="tag">React</span>
+            <span class="tag">Edge AI</span>
+          </div>
         </div>
-        <div class="project">
-          <img src="web_images/kanban.png" alt="Picture of a Kanban Board" />
-          <h2>Canvas Kanban Board for CS 3704</h2>
-          <p class="description">
-            This is my <a href="kanban.html">Canvas Kanban Board</a>.</p>
-        </div>
-        <div class="project">
-          <img src="web_images/github.png" alt="Picture of a Github Page" />
-          <h2>Github Page</h2>
-          <p class="description">
-            Check out my <a href="https://github.com/torrinconrath">Github</a> to see additional projects.</p>
-        </div>
-      </main>
+      </a>
 
-
-      <footer>
-        <div>
-          <p class="copyright">© Torrin Conrath 2024</p>
+      <!-- PROJECT: Agent vs Ghosts -->
+      <a class="project-card" href="game.html">
+        <div class="project-header">
+          <h2 class="project-title">Agent vs Ghosts</h2>
+          <span class="project-arrow">↗</span>
         </div>
-      </footer>
+        <p class="project-desc">
+          A top-down wave shooter built in Python and Pygame ported to HTML+JS. Dodge and shoot endless waves of escalating ghosts, collect 8 powerups, and survive as long as possible. Playable right here in the browser — no download needed.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML 5 Canvas</span>
+            <span class="tag">Game Dev</span>
+            <span class="tag">Python Legacy</span>
+          </div>
+          <span class="wip-badge">▶ Play Now</span>
+        </div>
+      </a>
 
     </div>
-  </body>
+  </section>
 
-</html>
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a software engineer interested in the intersection of AI, full-stack development, and systems that run close to the hardware. I like building things end-to-end — from training models to shipping the interface people actually use.</p>
+        <p>Right now I'm focused on bringing Car Score Predictor to a commercial release, and continuing to explore edge AI and on-device inference.</p>
+        <p>
+          <a href="/cdn-cgi/l/email-protection#d7a3b8a5a5beb9b4b8b9a5b6a3bf97b0bab6bebbf9b4b8ba" style="color: var(--accent); text-decoration: none; font-size: 14px; font-family: var(--font-mono);"><span class="__cf_email__" data-cfemail="f5819a87879c9b969a9b8794819db59298949c99db969a98">[email&#160;protected]</span> ↗</a>
+        </p>
+      </div>
+      <div class="about-skills">
+        <h3>Stack</h3>
+        <ul class="skill-list">
+          <li>Python, TypeScript, JavaScript</li>
+          <li>React, React Native, Vite, Expo</li>
+          <li>PyTorch, Hugging Face, Ultralytics</li>
+          <li>Flask, Node.js, MySQL</li>
+          <li>TFLite, ONNX, vLLM, AutoAWQ</li>
+          <li>AWS, Vercel, Ngrok, WSL</li>
+          <li>Raspberry Pi / Edge Hardware</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 Torrin Conrath</span>
+    <div class="footer
+    
