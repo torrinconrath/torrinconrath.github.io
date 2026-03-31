@@ -289,13 +289,13 @@ nav {
 
 .project-footer {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
 }
 
 .project-footer .tags {
-  flex: 1;
+  display: contents;
 }
 
 .tags {
