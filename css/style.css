@@ -324,12 +324,6 @@ nav {
   bottom: 0;
 }
 
-a.wip-badge {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline;
-}
-
 /* ── ABOUT ── */
 #about {
   padding: 3rem 0 5rem;
