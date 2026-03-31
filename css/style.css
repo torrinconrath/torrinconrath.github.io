@@ -322,6 +322,13 @@ nav {
   position: absolute;
   right: 0;
   bottom: 0;
+  text-decoration: none;
+}
+
+.project-footer > a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /* ── ABOUT ── */
