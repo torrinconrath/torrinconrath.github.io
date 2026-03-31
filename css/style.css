@@ -291,8 +291,11 @@ nav {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.project-footer .tags {
+  flex: 1;
 }
 
 .tags {
