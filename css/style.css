@@ -289,16 +289,16 @@ nav {
 
 .project-footer {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  flex: 1;
 }
 
 .tag {
@@ -310,7 +310,6 @@ nav {
   background: var(--tag-bg);
   padding: 3px 9px;
   border-radius: 2px;
-  align-self: flex-start;
 }
 
 .wip-badge {
@@ -323,16 +322,6 @@ nav {
   padding: 3px 9px;
   border-radius: 2px;
   border: 1px solid rgba(196,169,107,0.2);
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  align-self: flex-end;
-}
-
-.project-footer > a {
-  text-decoration: none;
-  flex-shrink: 0;
-  align-self: flex-end;
 }
 
 /* ── ABOUT ── */
