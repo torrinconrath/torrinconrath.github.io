@@ -289,13 +289,10 @@ nav {
 
 .project-footer {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
   align-items: center;
-}
-
-.project-footer .tags {
-  display: contents;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .tags {
@@ -325,13 +322,6 @@ nav {
   padding: 3px 9px;
   border-radius: 2px;
   border: 1px solid rgba(196,169,107,0.2);
-  flex-shrink: 0;         
-  align-self: flex-end;   
-}
-
-a.wip-badge {
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* ── ABOUT ── */
