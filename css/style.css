@@ -44,7 +44,7 @@ body::before {
 
 /* ── LAYOUT ── */
 .wrapper {
-  max-width: 780px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
@@ -107,12 +107,8 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-  .hero-photo {
-    display: none;
-  }
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo { display: none; }
 }
 
 .hero-eyebrow {
@@ -203,7 +199,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -221,21 +217,66 @@ nav {
   padding: 3rem 0 5rem;
 }
 
-.projects-grid {
+/* ── Filter bar ── */
+.filter-bar {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-right: 0.25rem;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-hover);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+  opacity: 0.6;
+}
+
+.filter-btn:hover  { opacity: 1; border-color: rgba(255,255,255,0.25); color: var(--text); }
+.filter-btn.active { opacity: 1; background: var(--accent2); color: #0c0c0e; border-color: var(--accent2); }
+
+/* ── 3-column project grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
 }
 
+@media (max-width: 1000px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Project card ── */
 .project-card {
   background: var(--bg2);
-  padding: 2rem 2rem 1.8rem;
+  padding: 1.75rem 1.75rem 1.5rem;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   transition: background 0.2s;
   position: relative;
@@ -243,16 +284,16 @@ nav {
   animation: fadeUp 0.5s ease forwards;
 }
 
-.project-card:last-child { border-bottom: none; }
-
-.project-card:hover {
-  background: var(--bg3);
-}
+/* Remove right border on last in each row — simpler to just let grid+overflow:hidden handle it */
+.project-card:hover { background: var(--bg3); }
 
 .project-card:hover .project-arrow {
   transform: translate(3px, -3px);
   opacity: 1;
 }
+
+/* Hidden card (filtered out) */
+.project-card.hidden { display: none; }
 
 .project-header {
   display: flex;
@@ -264,7 +305,7 @@ nav {
 
 .project-title {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: var(--text);
   line-height: 1.2;
 }
@@ -279,26 +320,33 @@ nav {
 }
 
 .project-desc {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 1.2rem;
-  max-width: 560px;
 }
 
+/* Footer sticks to bottom of card */
 .project-footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: auto;
 }
 
+.project-footer-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── Tags ── */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
 .tag {
@@ -308,10 +356,11 @@ nav {
   text-transform: uppercase;
   color: var(--tag-text);
   background: var(--tag-bg);
-  padding: 3px 9px;
+  padding: 3px 8px;
   border-radius: 2px;
 }
 
+/* ── WIP badge ── */
 .wip-badge {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -321,17 +370,61 @@ nav {
   background: var(--wip-bg);
   padding: 3px 9px;
   border-radius: 2px;
-  border: 1px solid rgba(196,169,107,0.2);
+  border: 1px solid rgba(40,181,132,0.2);
+  white-space: nowrap;
 }
 
-.wip-badge-link {
-  cursor: pointer;
-}
+.wip-badge-link { cursor: pointer; }
 
 .wip-badge-link:hover {
   background: rgba(40,181,132,0.2);
   border-color: rgba(40,181,132,0.35);
 }
+
+/* ── Tier badges ── */
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.tier-badge::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tier-badge.flagship {
+  background: rgba(212,164,0,0.1);
+  color: #c9a000;
+  border: 1px solid rgba(212,164,0,0.25);
+}
+.tier-badge.flagship::before { background: #c9a000; }
+
+.tier-badge.ml-research {
+  background: rgba(107,157,255,0.1);
+  color: #6b9dff;
+  border: 1px solid rgba(107,157,255,0.25);
+}
+.tier-badge.ml-research::before { background: #6b9dff; }
+
+.tier-badge.hobby {
+  background: rgba(180,180,180,0.07);
+  color: #6e6e6e;
+  border: 1px solid rgba(180,180,180,0.18);
+}
+.tier-badge.hobby::before { background: #6e6e6e; }
 
 /* ── ABOUT ── */
 #about {
@@ -376,7 +469,7 @@ nav {
   font-weight: 300;
   color: var(--text-muted);
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
 }
 
@@ -431,12 +524,15 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* stagger project cards */
 .project-card:nth-child(1) { animation-delay: 0.05s; }
-.project-card:nth-child(2) { animation-delay: 0.12s; }
-.project-card:nth-child(3) { animation-delay: 0.19s; }
-.project-card:nth-child(4) { animation-delay: 0.26s; }
-.project-card:nth-child(5) { animation-delay: 0.33s; }
+.project-card:nth-child(2) { animation-delay: 0.10s; }
+.project-card:nth-child(3) { animation-delay: 0.15s; }
+.project-card:nth-child(4) { animation-delay: 0.20s; }
+.project-card:nth-child(5) { animation-delay: 0.25s; }
+.project-card:nth-child(6) { animation-delay: 0.30s; }
+.project-card:nth-child(7) { animation-delay: 0.35s; }
+.project-card:nth-child(8) { animation-delay: 0.40s; }
+.project-card:nth-child(9) { animation-delay: 0.45s; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {

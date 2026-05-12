@@ -42,11 +42,23 @@
   <section id="projects">
     <p class="section-label">Projects</p>
 
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <span class="filter-label">Filter</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="flagship">⭐ Flagship</button>
+      <button class="filter-btn" data-filter="ml-research">ML / Research</button>
+      <button class="filter-btn" data-filter="hobby">Hobby</button>
+    </div>
+
     <!--
       ╔══════════════════════════════════════════╗
       ║  TO ADD A PROJECT:                       ║
       ║  Copy a .project-card block below,       ║
       ║  update the title, desc, tags, and href. ║
+      ║  Set data-tier to one of:                ║
+      ║    flagship | ml-research | full-stack   ║
+      ║    | hobby                               ║
       ║  Add wip-badge if still in development.  ║
       ╚══════════════════════════════════════════╝
     -->
@@ -54,7 +66,7 @@
     <div class="projects-grid">
 
       <!-- PROJECT: Hate Generation-->
-      <!-- <a class="project-card" href="https://github.com/torrinconrath/" target="_blank"> 
+      <!-- <a class="project-card" href="https://github.com/torrinconrath/" target="_blank" data-tier="flagship">
         <div class="project-header">
           <h2 class="project-title">Hate Generation</h2>
           <span class="project-arrow">↗</span>
@@ -82,45 +94,47 @@
             <span class="tag">Transformer Models</span>
             <span class="tag">Quantization</span>
           </div>
-          <span class="wip-badge">In Development (Private)</span>
+          <div class="project-footer-meta">
+            <span class="tier-badge flagship">Flagship</span>
+            <span class="wip-badge">In Development (Private)</span>
+          </div>
         </div>
       </a> -->
 
-      <!-- PROJECT: AI Confidence Scoring Framework -->
-      <a class="project-card" href="https://github.com/muhit009/VT-Capstone-AI-Trust-Metrics" target="_blank">
+      <!-- PROJECT: AI Trust Metrics -->
+      <a class="project-card" href="https://github.com/muhit009/VT-Capstone-AI-Trust-Metrics" target="_blank" data-tier="flagship">
         <div class="project-header">
-          <h2 class="project-title">AI Confidence Scoring Framework</h2>
+          <h2 class="project-title">AI Trust Metrics</h2>
           <span class="project-arrow">↗</span>
         </div>
         <p class="project-desc">
-          A comprehensive framework that assesses and quantifies the trustworthiness of AI-generated outputs from RAG-based enterprise knowledge systems. It employs a multi-faceted confidence engine, combining consistency, sensitivity, and novelty scores, to provide a unified, explainable reliability score for AI system outputs, enhancing decision-making and transparency. 
-        </p>
-        <p class="project-desc" style="margin-top: 0.6rem;">
-          I worked in a team, specifically, I developed the backend RAG and logging systems. This includes building a FastAPI service that ingests documents, vectorizes them, and then uses them in the confidence engine to score the user query's response. The query results are served to the React frontend, and all activities are logged throughout the process in a PostgreSQL database.
-        </p>
-        <p class="project-desc">
+          A full-stack RAG system that quantifies how much you can trust an AI's answer. Documents are ingested, vectorized, and run through a multi-faceted confidence engine — combining consistency, sensitivity, and novelty scores — to produce a single explainable reliability score per query. Results stream to a React frontend; all activity is logged in PostgreSQL. This project was developed as a Virginia Tech Capstone, with the problem statement provided by Boeing.
         </p>
         <div class="project-footer">
           <div class="tags">
-            <span class="tag">AI Confidence Scoring</span>
-            <span class="tag">Full-Stack Development</span>
             <span class="tag">RAG</span>
+            <span class="tag">AI Confidence Scoring</span>
             <span class="tag">Python</span>
             <span class="tag">FastAPI</span>
             <span class="tag">React</span>
             <span class="tag">LangChain</span>
-            <span class="tag">LLMs</span>
             <span class="tag">ChromaDB</span>
             <span class="tag">Docker</span>
             <span class="tag">PostgreSQL</span>
-            <span class="tag">Cloud Deployment (VT ARC)</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">NVIDIA NIM</span>
+            <span class="tag">Github Actions</span>
+            <span class="tag">AWS (ECS, ECR, EFS)</span>
           </div>
-          <span class="wip-badge">In Development</span>
+          <div class="project-footer-meta">
+            <span class="tier-badge flagship">Flagship</span>
+            <span class="wip-badge wip-badge-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://ground-check.vercel.app/', '_blank');">Deployed Here ↗</span>
+          </div>
         </div>
       </a>
 
       <!-- PROJECT: Mugen -->
-      <a class="project-card" href="https://github.com/torrinconrath/hoohacks-2026" target="_blank">
+      <a class="project-card" href="https://github.com/torrinconrath/hoohacks-2026" target="_blank" data-tier="flagship">
         <div class="project-header">
           <h2 class="project-title">Mugen AI</h2>
           <span class="project-arrow">↗</span>
@@ -140,12 +154,15 @@
             <span class="tag">ElevenLabs</span>
             <span class="tag">Supabase</span>
           </div>
-          <span class="wip-badge wip-badge-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://mugenai.vercel.app/', '_blank');">Deployed Here ↗</span>
+          <div class="project-footer-meta">
+            <span class="tier-badge flagship">Flagship</span>
+            <span class="wip-badge wip-badge-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://mugenai.vercel.app/', '_blank');">Deployed Here ↗</span>
+          </div>
         </div>
       </a>
 
       <!-- PROJECT: Jerry Medical Assistant -->
-      <a class="project-card" href="https://github.com/torrinconrath/jerry-the-medical-assistant" target="_blank">
+      <a class="project-card" href="https://github.com/torrinconrath/jerry-the-medical-assistant" target="_blank" data-tier="ml-research">
         <div class="project-header">
           <h2 class="project-title">Jerry The Medical Assistant</h2>
           <span class="project-arrow">↗</span>
@@ -164,11 +181,66 @@
             <span class="tag">SFT / LoRA</span>
             <span class="tag">vLLM</span>
           </div>
+          <div class="project-footer-meta">
+            <span class="tier-badge ml-research">ML / Research</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PROJECT: Depression Severity Detection -->
+      <a class="project-card" href="https://github.com/torrinconrath/depression-detection" target="_blank" data-tier="ml-research">
+        <div class="project-header">
+          <h2 class="project-title">Depression Severity Detection</h2>
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc">
+          A two-tier cascade pipeline that classifies depression severity in social media posts across four PHQ-9-aligned levels. A recall-optimised DistilBERT sentinel gates posts to a QLoRA fine-tuned Llama 3.1-8B reasoning engine, achieving 100% severe recall and strong macro F1 — while keeping inference efficient and safety-first.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">NLP</span>
+            <span class="tag">LLM Fine-tuning</span>
+            <span class="tag">Python</span>
+            <span class="tag">DistilBERT</span>
+            <span class="tag">Llama 3.1-8B</span>
+            <span class="tag">QLoRA</span>
+            <span class="tag">Hugging Face</span>
+            <span class="tag">Chain-of-Thought</span>
+          </div>
+          <div class="project-footer-meta">
+            <span class="tier-badge ml-research">ML / Research</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PROJECT: ANLI Rationale Auditor -->
+      <a class="project-card" href="https://github.com/torrinconrath/anli-auditor" target="_blank" data-tier="ml-research">
+        <div class="project-header">
+          <h2 class="project-title">ANLI Rationale Auditor</h2>
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc">
+          An NLP interpretability suite that probes whether a fine-tuned RoBERTa-large model actually reasons the way it claims to. Two custom metrics — Latent Alignment Score (LAS) and Causal Sensitivity Index (CSI) — measure how closely the model's internal state matches human-grounded rationales vs. post-hoc justification on the adversarial ANLI benchmark.
+        </p>
+        <div class="project-footer">
+          <div class="tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Interpretability</span>
+            <span class="tag">Python</span>
+            <span class="tag">RoBERTa</span>
+            <span class="tag">Hugging Face</span>
+            <span class="tag">TextFooler</span>
+            <span class="tag">Fine-tuning</span>
+            <span class="tag">ANLI</span>
+          </div>
+          <div class="project-footer-meta">
+            <span class="tier-badge ml-research">ML / Research</span>
+          </div>
         </div>
       </a>
 
       <!-- PROJECT: Pest Detector -->
-      <a class="project-card" href="https://github.com/torrinconrath/pest-detector" target="_blank">
+      <a class="project-card" href="https://github.com/torrinconrath/pest-detector" target="_blank" data-tier="ml-research">
         <div class="project-header">
           <h2 class="project-title">Robust Pest Detector</h2>
           <span class="project-arrow">↗</span>
@@ -189,11 +261,14 @@
             <span class="tag">Edge AI</span>
             <span class="tag">Raspberry Pi</span>
           </div>
+          <div class="project-footer-meta">
+            <span class="tier-badge ml-research">ML / Research</span>
+          </div>
         </div>
       </a>
 
       <!-- PROJECT: Car Score Predictor -->
-      <a class="project-card" href="https://github.com/torrinconrath/car-score-predictor" target="_blank">
+      <a class="project-card" href="https://github.com/torrinconrath/car-score-predictor" target="_blank" data-tier="hobby">
         <div class="project-header">
           <h2 class="project-title">Car Score Predictor</h2>
           <span class="project-arrow">↗</span>
@@ -213,11 +288,14 @@
             <span class="tag">MySQL</span>
             <span class="tag">AWS (EC2, RDS)</span>
           </div>
+          <div class="project-footer-meta">
+            <span class="tier-badge hobby">Hobby</span>
+          </div>
         </div>
       </a>
 
       <!-- PROJECT: Agent vs Ghosts -->
-      <a class="project-card" href="https://github.com/torrinconrath/agent-vs-ghosts" target="_blank">
+      <a class="project-card" href="https://github.com/torrinconrath/agent-vs-ghosts" target="_blank" data-tier="hobby">
         <div class="project-header">
           <h2 class="project-title">Agent vs Ghosts</h2>
           <span class="project-arrow">↗</span>
@@ -232,7 +310,10 @@
             <span class="tag">HTML 5 Canvas</span>
             <span class="tag">Pygame Legacy</span>
           </div>
-          <span class="wip-badge wip-badge-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://agent-vs-ghosts.vercel.app/', '_blank');">▶ Play Now</span>
+          <div class="project-footer-meta">
+            <span class="tier-badge hobby">Hobby</span>
+            <span class="wip-badge wip-badge-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://agent-vs-ghosts.vercel.app/', '_blank');">▶ Play Now</span>
+          </div>
         </div>
       </a>
 
@@ -289,6 +370,31 @@
         el.href = href;
         if (id === 'emailLink') el.textContent = addr + ' ↗';
       }
+    });
+  })();
+
+  // ── Project filter ─────────────────────────────────────────────────
+  (function() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards   = document.querySelectorAll('.project-card');
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const filter = btn.dataset.filter;
+
+        // Toggle active state
+        buttons.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        // Show / hide cards
+        cards.forEach(function(card) {
+          if (filter === 'all' || card.dataset.tier === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
     });
   })();
 </script>
